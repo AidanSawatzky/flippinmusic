@@ -1,0 +1,291 @@
+@keyframes glitch {
+  0%, 100% {
+      transform: none;
+      opacity: 1;
+  }
+  5% {
+      transform: translate(-0.125rem, -0.125rem);
+      opacity: 0.7;
+  }
+  10% {
+      transform: translate(0.125rem, 0.125rem);
+      opacity: 0.9;
+  }
+  15% {
+      transform: translate(-0.125rem, 0.125rem);
+      opacity: 0.6;
+  }
+  20% {
+      transform: translate(0.125rem, -0.125rem);
+      opacity: 0.8;
+  }
+  25% {
+      transform: translate(-0.0625rem, 0.0625rem);
+      opacity: 0.5;
+  }
+  30% {
+      transform: translate(0.0625rem, -0.0625rem);
+      opacity: 0.7;
+  }
+}
+
+@keyframes glitch-hover {
+  0%, 100% {
+      transform: none;
+      opacity: 1;
+  }
+  5% {
+      transform: translate(-0.0625rem, -0.0625rem);
+      opacity: 0.8;
+  }
+  10% {
+      transform: translate(0.0625rem, 0.0625rem);
+      opacity: 0.6;
+  }
+  15% {
+      transform: translate(-0.0625rem, 0.0625rem);
+      opacity: 0.9;
+  }
+  20% {
+      transform: translate(0.0625rem, -0.0625rem);
+      opacity: 0.7;
+  }
+  25% {
+      transform: translate(-0.0625rem, 0rem);
+      opacity: 0.5;
+  }
+  30% {
+      transform: translate(0.0625rem, 0rem);
+      opacity: 0.8;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #0c0c0c;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.mainheading {
+  font-size: 75px;
+  animation: glitch 1s infinite;
+  text-align: center;
+}
+
+#signin {
+  color: white;
+  text-align: right;
+  font-size: 2vw;
+  margin: 3vw 5vw 2vh 0;
+}
+
+.mainheading, nav {
+  color: white;
+  text-align: center;
+  
+}
+
+.regnav ul,
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.regnav li,
+nav li {
+  list-style: none;
+}
+
+.regnav div,
+nav div {
+  margin: 0;
+  margin-top: 10px;
+}
+
+h2 {
+  margin: 0;
+  padding: 1.0rem;
+  cursor: pointer;
+  font-size: 2.2vw;
+  color: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  animation: glitch-hover 1s infinite;
+}
+
+.homeorg,
+.sign-in-container {
+  margin-top: 5vh;
+}
+
+.sign-in-container {
+  margin-bottom: 5vh;
+  margin-right: 5vh;
+}
+
+.livesets {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.3125rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 0.625rem;
+  border: 2px solid #fff;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #fff;
+}
+
+.fake-button,
+button {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: black;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.blue-hover,
+button {
+  background-color: #fff;
+  color: black;
+}
+
+.blue-hover:hover,
+button:hover {
+  background-color: #eee;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10x;
+  padding: 2vh;
+  background-color: #0c0c0c;
+}
+
+h1 {
+  transition: transform 0.3s ease;
+}
+
+@keyframes jump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+h1:hover {
+  animation: jump 0.5s ease, shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-0.3125rem); }
+  20%, 40%, 60%, 80% { transform: translateX(0.3125rem); }
+}
+
+.form-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+#underconstruction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+footer img {
+  height: 20px;
+}
+
+
+#musiclist{
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+#twitch-embed{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 110px;
+}
+
